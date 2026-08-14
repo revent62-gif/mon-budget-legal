@@ -3,42 +3,86 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Politique de confidentialité — Mon Budget</title>
+<title>MyRevent — Politique de confidentialité</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><h1>Politique de confidentialité</h1><p>Mon Budget</p></header>
+<header>
+  <h1>Politique de confidentialité</h1>
+  <p>MyRevent</p>
+</header>
 <main>
-  <a class="back" href="index.html">← Retour</a>
+  <a class="back" href="index.html">← Informations légales</a>
   <div class="card">
-    <p class="maj">Dernière mise à jour : juin 2026</p>
+    <p class="maj">Dernière mise à jour : août 2026</p>
 
     <h2>1. Données collectées</h2>
-    <p>• Prénom (identifiant de compte)<br>
-       • Code PIN (stocké chiffré via bcrypt)<br>
-       • Données budgétaires saisies par l'utilisateur<br>
-       • Jeton d'appareil pour la connexion automatique</p>
+    <p><strong>Compte et connexion</strong></p>
+    <ul>
+      <li>Prénom (identifiant du compte)</li>
+      <li>Adresse e-mail (obligatoire, pour retrouver votre compte)</li>
+      <li>Code PIN (stocké chiffré, jamais en clair)</li>
+      <li>Question de sécurité et sa réponse (réponse stockée chiffrée)</li>
+      <li>Jeton d'appareil, pour la connexion automatique</li>
+      <li>Jeton de notification, pour vous prévenir sur cet appareil</li>
+    </ul>
+
+    <p><strong>Utilisation de l'application</strong></p>
+    <ul>
+      <li>Revenus, charges, épargne, dépenses, budgets et libellés que vous saisissez</li>
+      <li>Dans les espaces partagés : votre nom d'affichage, les dépenses partagées et les remboursements</li>
+    </ul>
+
+    <p><strong>Fonctionnement technique</strong></p>
+    <ul>
+      <li>En cas de plantage : la trace de l'erreur, le modèle de l'appareil, la version d'Android
+          et de l'application, et un identifiant technique d'installation (qui n'est pas votre compte)</li>
+    </ul>
+
+    <p><strong>MyRevent ne collecte aucune donnée d'usage ni statistique de navigation.
+       Aucune publicité, aucun traceur publicitaire, aucune revente de données.</strong></p>
 
     <h2>2. Finalité</h2>
-    <p>Ces données sont utilisées uniquement pour faire fonctionner l'application
-       et permettre la synchronisation entre appareils.</p>
+    <p>Faire fonctionner l'application, sécuriser l'accès au compte, synchroniser vos appareils,
+       vous permettre de partager un budget, et corriger les plantages.</p>
 
-    <h2>3. Stockage</h2>
-    <p>Les données sont stockées sur un serveur privé. Aucune donnée n'est partagée
-       avec des tiers ou utilisée à des fins publicitaires.</p>
+    <h2>3. Destinataires et sous-traitants</h2>
+    <p>Vos données sont stockées sur un serveur privé. Interviennent uniquement :</p>
+    <ul>
+      <li><strong>Google Firebase</strong> — acheminement des notifications et rapports de plantage</li>
+      <li><strong>Cloudflare</strong> — sécurisation (HTTPS) des échanges avec le serveur</li>
+    </ul>
+    <p>Dans un espace partagé, les autres membres voient les données saisies dans cet espace.</p>
 
     <h2>4. Durée de conservation</h2>
-    <p>Les données sont conservées jusqu'à la suppression du compte par l'utilisateur.</p>
+    <ul>
+      <li>Compte et données budgétaires : jusqu'à la suppression du compte</li>
+      <li>Espace partagé : supprimé, avec tout son contenu, lorsque son dernier membre le quitte</li>
+      <li>Rapports de plantage : 90 jours</li>
+      <li>Jetons de notification : supprimés dès qu'ils deviennent invalides</li>
+    </ul>
 
     <h2>5. Vos droits (RGPD)</h2>
-    <p>Vous disposez d'un droit d'accès, de rectification, de portabilité et de
-       suppression de vos données. Ces droits s'exercent depuis l'application
-       (Paramètres &gt; Mes données) ou par email.</p>
+    <p>Vous disposez d'un droit d'accès, de rectification, de portabilité, de suppression et
+       d'opposition.</p>
+    <p><strong>Depuis l'application :</strong></p>
+    <ul>
+      <li>Accès et portabilité : Paramètres &gt; Mes données (export)</li>
+      <li>Rectification : modification directe, et Paramètres &gt; Sécurité pour l'e-mail</li>
+      <li>Suppression : Paramètres &gt; Mes données &gt; suppression du compte</li>
+    </ul>
+    <p>Vous pouvez aussi nous écrire à
+       <a href="mailto:support@myrevent.com">support@myrevent.com</a>. Vous avez le droit
+       d'introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
 
-    <h2>6. Contact</h2>
-    <p>Pour exercer vos droits : <a href="mailto:support@monbudget.fr">support@monbudget.fr</a></p>
+    <h2>6. Sécurité</h2>
+    <p>Codes et réponses secrètes chiffrés, échanges en HTTPS, session limitée dans le temps,
+       protection contre les tentatives répétées de connexion.</p>
+
+    <h2>7. Contact</h2>
+    <p>Pour exercer vos droits : <a href="mailto:support@myrevent.com">support@myrevent.com</a></p>
   </div>
 </main>
-<footer>© Mon Budget — Document soumis au droit français.</footer>
+<footer>© MyRevent — Document soumis au droit français.</footer>
 </body>
 </html>
