@@ -14,80 +14,384 @@
 <main>
   <a class="back" href="index.html">← Informations légales</a>
   <div class="card">
-    <p class="maj">Dernière mise à jour : août 2026</p>
+    <p class="maj">Dernière mise à jour : 22 novembre 2026</p>
+
+    <h2>Ce qui a changé depuis août 2026</h2>
+    <ul>
+      <li><strong>Photos de justificatifs</strong> : dans un groupe, vous pouvez joindre la photo
+          d'un ticket ou d'une facture à une dépense. Cette photo est envoyée à notre serveur et
+          visible des membres du groupe (rubriques 1, 3 et 4).</li>
+      <li>La position du lieu de la prise de vue et les informations sur l'appareil sont retirées
+          des photos, par l'application avant l'envoi et par notre serveur à la réception. Les
+          photos reçues avant ce changement en ont été nettoyées. Supprimer une dépense supprime
+          aussi sa photo (rubriques 1 et 4).</li>
+      <li><strong>Lecture d'un ticket</strong> : la lecture automatique d'un ticket se fait
+          entièrement sur votre téléphone ; la photo n'est envoyée à personne, et les copies faites
+          par l'application sont effacées (rubrique 1).</li>
+      <li><strong>Membres sans compte</strong> : dans un groupe, vous pouvez ajouter une personne
+          qui n'a pas l'application, en saisissant son prénom (rubrique 1).</li>
+      <li><strong>Demande d'avis</strong> : l'application peut vous proposer de noter MyRevent sur
+          Google Play (rubrique 3).</li>
+      <li>Ajout de la date de dernière utilisation, de la double authentification, de l'adresse IP,
+          du contenu des notifications, des exports, des chiffres gardés pour le widget et des
+          copies de sauvegarde (rubriques 1, 3, 4 et 6).</li>
+      <li>L'export de vos données est plus complet : réglages, remboursements, dépenses
+          récurrentes, parts par défaut et mois clôturés y figurent désormais (rubrique 6).</li>
+      <li>Une nouvelle rubrique explique comment <a href="#suppression">supprimer votre compte</a>,
+          y compris sans l'application.</li>
+      <li>Le mot « chiffré » a été remplacé par « haché » quand c'est le terme exact, et la
+          rubrique 7 dit ce que le hachage protège, et ce qu'il ne protège pas.</li>
+      <li>Dans un groupe à plusieurs monnaies, l'application télécharge les taux de change de la
+          Banque centrale européenne (rubrique 3).</li>
+      <li>Changer de code PIN déconnecte vos autres appareils ; la date de ce changement est
+          gardée (rubrique 1).</li>
+      <li><strong>Import d'un relevé bancaire</strong> et « Partager vers MyRevent » : le fichier
+          est lu sur votre téléphone et n'est envoyé à personne (rubrique 1).</li>
+      <li>La liste des destinataires cite aussi IONOS et Gmail (courrier du support), GitHub
+          (ces pages) et le rôle de Google Play (rubrique 3).</li>
+      <li><strong>Magasins retenus</strong> : à partir d'un ticket lu par l'application, le nom
+          du magasin et la catégorie choisie sont retenus sur notre serveur (rubrique 1).</li>
+      <li>Vous pouvez nous donner des consignes pour vos données après votre décès
+          (rubrique 6).</li>
+      <li><strong>Comptes inutilisés</strong> : un compte inutilisé pendant 2 ans est
+          supprimé, après un avertissement envoyé au moins 30 jours avant (rubrique 4).</li>
+      <li><strong>Sécurité</strong> : le code PIN et la réponse secrète sont hachés avec un
+          secret gardé hors de la base de données, la clé de double authentification est
+          chiffrée, et le blocage après des codes faux s'allonge à chaque fois, jusqu'à
+          24 heures (rubriques 1 et 7). Si des codes faux bloquent votre compte deux fois de
+          suite, un e-mail vous prévient, quand votre adresse est confirmée (rubrique 3).</li>
+      <li>Chaque téléphone qui ouvre une session avec le bon code PIN reçoit un
+          <strong>jeton d'appareil</strong>, pour être reconnu ensuite (rubrique 1).</li>
+      <li><strong>Simulations</strong> : celles que vous choisissez d'enregistrer (5 au plus)
+          sont gardées sur notre serveur avec votre compte (rubriques 1, 4 et 6).</li>
+      <li><strong>Import d'un relevé</strong> : une courte empreinte de chaque dépense ajoutée
+          est gardée, pour la reconnaître à l'import suivant (rubrique 1).</li>
+    </ul>
 
     <h2>1. Données collectées</h2>
     <p><strong>Compte et connexion</strong></p>
     <ul>
-      <li>Prénom (identifiant du compte)</li>
-      <li>Adresse e-mail (obligatoire, pour retrouver votre compte)</li>
-      <li>Code PIN (stocké chiffré, jamais en clair)</li>
-      <li>Question de sécurité et sa réponse (réponse stockée chiffrée)</li>
-      <li>Jeton d'appareil, pour la connexion automatique</li>
-      <li>Jeton de notification, pour vous prévenir sur cet appareil</li>
+      <li>Pseudo (l'identifiant de votre compte, visible des membres de vos espaces partagés)</li>
+      <li>Adresse e-mail (obligatoire, pour confirmer votre adresse et retrouver votre pseudo si
+          vous l'oubliez)</li>
+      <li>Code PIN : haché sur notre serveur, avec un secret gardé hors de la base de données. Un
+          code court (4 à 6 chiffres) ne peut donc pas être retrouvé par essais à partir d'une
+          simple copie de la base ; ce qui le protège surtout reste le blocage du compte après
+          5 codes faux et l'accès restreint au serveur (rubrique 7). Une copie chiffrée reste sur
+          votre téléphone, pour le déverrouiller hors connexion (voir plus bas).</li>
+      <li>Question de sécurité (en clair) et sa réponse (conservée uniquement sous forme hachée,
+          comme le PIN). La question, jamais la réponse, s'affiche à toute personne qui saisit votre pseudo sur
+          l'écran « Code PIN oublié ? » ; or votre pseudo est visible des membres de vos espaces
+          partagés. Choisissez une question dont vos proches ne connaissent pas la réponse.</li>
+      <li>Jour de versement de votre salaire</li>
+      <li>La version des conditions que vous avez acceptées, et la date de cette acceptation</li>
+      <li>La date de votre dernière utilisation de l'application (une fois par jour au plus), qui
+          sert aussi à repérer les comptes inutilisés (rubrique 4)</li>
+      <li>La date de votre dernier changement de code PIN : à ce moment-là, vos autres appareils
+          sont déconnectés et doivent saisir le nouveau code</li>
+      <li>Jeton d'appareil : chaque téléphone qui ouvre une session avec le bon code PIN en
+          reçoit un, pour être reconnu ensuite (5 téléphones par compte au plus). Le serveur n'en
+          garde que l'empreinte, avec la date du dernier passage de ce téléphone.</li>
+      <li>Jeton de notification (Firebase), pour vous prévenir sur cet appareil</li>
+      <li>Si vous activez la double authentification : une clé secrète, chiffrée sur le serveur
+          avec une clé gardée hors de la base de données (le serveur doit pouvoir la relire pour
+          vérifier les codes de votre application d'authentification)</li>
     </ul>
 
     <p><strong>Utilisation de l'application</strong></p>
     <ul>
-      <li>Revenus, charges, épargne, dépenses, budgets et libellés que vous saisissez</li>
-      <li>Dans les espaces partagés : votre nom d'affichage, les dépenses partagées et les remboursements</li>
+      <li>Revenus, charges, épargne, dépenses, budgets, catégories et libellés que vous saisissez,
+          et l'historique de vos mois</li>
+      <li>Dans les espaces partagés (foyer, groupes) : le nom de l'espace, votre nom d'affichage,
+          les dépenses partagées, la répartition entre membres, les dépenses récurrentes, les mois
+          clôturés et les remboursements</li>
+      <li>Les prénoms des <strong>membres sans compte</strong> que vous ajoutez à un groupe.
+          Ne saisissez que ce qui est nécessaire pour vous y retrouver.</li>
+      <li><strong>Photos de justificatifs</strong> (tickets, factures) que vous choisissez de
+          joindre à une dépense de groupe. Elles sont réduites et compressées sur votre téléphone,
+          puis envoyées à notre serveur. L'application retire de la photo, avant l'envoi, les
+          informations cachées qu'elle peut contenir : la position du lieu de la prise de vue, le
+          modèle et le numéro de série de l'appareil. Notre serveur les retire aussi à la
+          réception, quelle que soit la version de l'application ; les photos reçues avant ce
+          changement en ont été nettoyées. Seule l'orientation (portrait ou paysage) est gardée,
+          pour que la photo s'affiche à l'endroit. Ce retrait concerne les photos au format JPEG,
+          celui de l'appareil photo ; une image PNG ou WebP choisie dans la galerie est envoyée et
+          conservée telle quelle. ⚠️ Une photo de ticket peut montrer plus que le montant :
+          une adresse, un numéro de carte de fidélité, parfois les derniers chiffres d'une carte
+          bancaire. Vérifiez-la avant de l'envoyer.</li>
+      <li><strong>Magasins retenus</strong> : quand vous ajoutez une dépense à partir d'un ticket
+          lu par l'application (scanné, ou partagé vers MyRevent), celle-ci retient le nom du
+          magasin et la catégorie que vous avez choisie, pour la proposer au ticket suivant.
+          Cette liste (200 magasins au plus) est enregistrée sur notre serveur avec votre
+          budget ; dans le foyer, elle est commune aux deux membres.</li>
+      <li><strong>Simulations enregistrées</strong> : si vous enregistrez une simulation (5 au
+          plus), son nom, sa date et son contenu (les montants simulés et l'objectif éventuel)
+          sont gardés sur notre serveur avec votre compte, pour que vous les retrouviez sur vos
+          appareils. Elles restent personnelles : jamais dans le foyer ni dans un groupe.</li>
+    </ul>
+
+    <p><strong>Ce qui reste sur votre téléphone</strong></p>
+    <ul>
+      <li><strong>Lecture d'un ticket</strong> : le texte est reconnu sur le téléphone (outil
+          ML Kit de Google, intégré à l'application). La photo n'est envoyée ni à nous ni à
+          personne. Les copies faites par l'application sont effacées dès la lecture faite, ou au
+          plus tard au démarrage suivant de l'application. Si vous avez choisi la photo dans votre
+          galerie, l'original y reste : il vous appartient. Seuls le montant et le libellé que
+          vous validez sont enregistrés, comme une saisie ordinaire, ainsi que le nom du magasin
+          (voir « Magasins retenus », plus haut).</li>
+      <li>Une copie de vos données pour fonctionner hors connexion, dans l'espace privé de
+          l'application sur le téléphone. Elle n'est copiée ni dans les sauvegardes Android, ni
+          lors d'un transfert vers un nouveau téléphone. Elle est effacée à chaque nouvelle
+          connexion, à la suppression du compte, et quand vous désinstallez l'application.</li>
+      <li>Les chiffres que le widget d'écran d'accueil peut afficher (disponible, revenus,
+          charges, épargne, catégories, soldes de vos groupes et du foyer), gardés dans l'espace
+          privé de l'application tant que vous êtes connecté, même si vous n'avez posé aucun
+          widget. Ils sont effacés à la suppression ou à la réinitialisation du compte, quand un
+          autre compte se connecte sur le téléphone, et quand vous désinstallez l'application. Si
+          vous posez le widget, le chiffre choisi s'affiche sur l'écran d'accueil : il est visible
+          de toute personne qui voit votre écran.</li>
+      <li>Vos réglages, et la copie chiffrée de votre code PIN qui permet le déverrouillage hors
+          connexion (effacée à la suppression du compte). L'empreinte ou le visage sont vérifiés
+          par Android : MyRevent n'y a jamais accès.</li>
+      <li>Les exports (JSON, tableur CSV, PDF) sont fabriqués sur le téléphone. Vous choisissez
+          vous-même où les envoyer ; la copie temporaire est effacée après le partage, ou au plus
+          tard au démarrage suivant de l'application.</li>
+      <li><strong>Import d'un relevé bancaire et « Partager vers MyRevent »</strong> : le fichier
+          que vous choisissez ou partagez (relevé CSV ou OFX, photo, PDF) est lu sur votre
+          téléphone. Il n'est envoyé ni à nous ni à personne. La copie faite par l'application est
+          effacée dès la lecture, ou au plus tard au démarrage suivant de l'application. Seules les
+          dépenses que vous validez sont enregistrées, comme une saisie ordinaire ; pour un ticket
+          partagé, le magasin est retenu comme pour un ticket scanné. Pour un relevé, une
+          courte empreinte de chaque dépense ajoutée (calculée à partir de sa date, de son montant
+          et de son libellé) est gardée sur notre serveur avec votre budget, 1 000 au plus, pour
+          vous signaler « déjà importée » au relevé suivant.</li>
     </ul>
 
     <p><strong>Fonctionnement technique</strong></p>
     <ul>
-      <li>En cas de plantage : la trace de l'erreur, le modèle de l'appareil, la version d'Android
-          et de l'application, et un identifiant technique d'installation (qui n'est pas votre compte)</li>
+      <li>En cas de plantage (Firebase Crashlytics) : la trace de l'erreur, l'état de
+          l'application, le modèle de l'appareil, la version d'Android et de l'application, et un
+          identifiant technique d'installation (qui n'est pas votre compte)</li>
+      <li>L'outil de lecture de ticket (ML Kit) transmet à Google des informations techniques et
+          des statistiques d'utilisation de cet outil : modèle et version de l'appareil, version de
+          l'application, mesures de performance, réglages de l'outil, type d'événement (démarrage,
+          lecture…), taille de l'image et du résultat, et codes d'erreur, avec un identifiant
+          d'installation. Google les utilise pour le diagnostic et l'analyse de l'utilisation de
+          l'outil. Jamais la photo ni le texte lu.</li>
+      <li>Votre adresse IP, vue par notre serveur et par Cloudflare. Notre serveur ne l'enregistre
+          pas en base : il la garde en mémoire, une heure au plus, pour limiter les tentatives de
+          connexion répétées.</li>
     </ul>
 
-    <p><strong>MyRevent ne collecte aucune donnée d'usage ni statistique de navigation.
-       Aucune publicité, aucun traceur publicitaire, aucune revente de données.</strong></p>
+    <p><strong>MyRevent n'a pas d'outil de mesure d'audience. Seul l'outil de lecture de ticket
+       (ML Kit) envoie à Google des statistiques techniques sur sa propre utilisation, décrites
+       ci-dessus. Aucune publicité, aucun traceur publicitaire, aucune revente de données. Aucune
+       connexion à votre banque.</strong></p>
 
-    <h2>2. Finalité</h2>
-    <p>Faire fonctionner l'application, sécuriser l'accès au compte, synchroniser vos appareils,
-       vous permettre de partager un budget, et corriger les plantages.</p>
+    <h2>2. Finalités et bases légales</h2>
+    <ul>
+      <li>Faire fonctionner l'application, synchroniser vos appareils et vous permettre de
+          partager un budget : exécution du service que vous demandez.</li>
+      <li>Garder les simulations que vous choisissez d'enregistrer, pour les retrouver et les
+          comparer sur vos appareils : exécution du service que vous demandez.</li>
+      <li>Sécuriser l'accès au compte, confirmer votre adresse e-mail et vous aider à retrouver
+          votre pseudo : exécution du service.</li>
+      <li>Vous envoyer des notifications (nouvelle dépense, remboursement, rappel) : avec votre
+          accord, donné à Android. Vous pouvez le retirer dans les réglages du téléphone.</li>
+      <li>Corriger les plantages et suivre la fiabilité de l'application, y compris celle de
+          l'outil de lecture de ticket : notre intérêt légitime à fournir une application qui
+          fonctionne.</li>
+      <li>Garder des copies de sauvegarde, pour pouvoir restaurer vos données après une panne :
+          notre intérêt légitime à ne pas les perdre.</li>
+    </ul>
 
     <h2>3. Destinataires et sous-traitants</h2>
-    <p>Vos données sont stockées sur un serveur privé. Interviennent uniquement :</p>
+    <p>Vos données sont stockées sur un serveur privé situé en France, administré par l'éditeur.
+       Le nom et l'adresse de l'hébergeur de ce serveur figurent dans les
+       <a href="mentions-legales.html">mentions légales</a>.
+       Une copie de sauvegarde complète (base de données et photos de justificatifs) est faite
+       chaque jour et envoyée sur Google Drive, dans l'espace de stockage de l'éditeur.
+       Ces copies sont chiffrées avant l'envoi sur Google Drive, avec un mot de passe que seul
+       l'éditeur détient. Seul l'éditeur administre ce serveur et gère ces sauvegardes, pour la
+       maintenance. Interviennent en plus :</p>
     <ul>
-      <li><strong>Google Firebase</strong> (dont Crashlytics) — acheminement des notifications et
-          rapports de plantage</li>
-      <li><strong>Cloudflare</strong> — sécurisation (HTTPS) des échanges avec le serveur</li>
+      <li><strong>Google Firebase</strong> — acheminement des notifications (Cloud Messaging) et
+          rapports de plantage (Crashlytics). Le texte d'une notification passe par Google :
+          il peut contenir le nom d'un espace, un nom d'affichage, le libellé et le montant d'une
+          dépense ou d'un remboursement, et, quand vous quittez un foyer, votre pseudo (celui qui
+          sert à vous connecter), affiché à l'autre membre.</li>
+      <li><strong>Google ML Kit</strong> — informations techniques et statistiques d'utilisation
+          de l'outil de lecture de ticket (voir rubrique 1).</li>
+      <li><strong>Google Drive</strong> — stockage des copies de sauvegarde quotidiennes du
+          serveur (voir ci-dessus).</li>
+      <li><strong>Cloudflare</strong> — relaie les échanges entre l'application et le serveur, et
+          protège le serveur des attaques. Le trajet est chiffré (HTTPS) de votre téléphone à
+          Cloudflare, puis de Cloudflare à notre serveur ; pour relayer les échanges, Cloudflare
+          les reçoit déchiffrés (y compris votre code PIN au moment de la connexion, votre budget
+          et vos photos).</li>
       <li><strong>Brevo</strong>, société française — envoi de nos courriers : le code qui confirme
-          votre adresse, et le rappel de votre identifiant si vous l'oubliez</li>
+          votre adresse, le rappel de votre pseudo si vous l'oubliez,
+          l'alerte quand des codes faux bloquent votre compte deux fois de suite (adresse
+          confirmée seulement), et l'avertissement avant la suppression d'un compte inutilisé
+          (rubrique 4).</li>
+      <li><strong>Google Play</strong> — si vous installez ou mettez à jour l'application par
+          Google Play, Google traite les données de votre compte Google selon ses propres règles,
+          et l'éditeur reçoit de Google Play des chiffres d'ensemble (nombre d'installations,
+          plantages), sans votre nom. Si l'application vous propose de la noter, la fenêtre de
+          notation est celle de Google Play ; MyRevent ne reçoit pas votre note par
+          l'application.</li>
+      <li><strong>Banque centrale européenne</strong> — dans un groupe, pour convertir une dépense
+          faite dans une autre monnaie, l'application télécharge au plus une fois par jour le
+          fichier public des taux de change. Rien de personnel n'est envoyé : la BCE voit
+          seulement l'adresse IP de votre téléphone, comme pour toute connexion.</li>
+      <li><strong>IONOS</strong> — gère l'adresse support@myrevent.com. Si vous nous écrivez,
+          votre message passe par IONOS ; il peut être transféré vers une boîte Gmail (Google) de
+          l'éditeur.</li>
+      <li><strong>GitHub</strong>, établi aux États-Unis — héberge ces pages d'information.
+          Quand vous les ouvrez, GitHub voit l'adresse IP de votre appareil, comme pour tout
+          site web.</li>
     </ul>
-    <p><strong>Transferts hors Union européenne :</strong> Google et Cloudflare sont établis aux
-       États-Unis. Ces transferts sont encadrés par le cadre de protection des données
-       UE–États-Unis (Data Privacy Framework), auquel ces deux sociétés adhèrent.</p>
-    <p>Dans un espace partagé, les autres membres voient les données saisies dans cet espace.</p>
+    <p><strong>Transferts hors Union européenne :</strong> Google, Cloudflare et GitHub sont
+       établis aux États-Unis. Ces transferts sont encadrés par le cadre de protection des données
+       UE–États-Unis (Data Privacy Framework), auquel ces trois sociétés adhèrent.</p>
+    <p><strong>Dans un espace partagé</strong>, les autres membres voient ce qui est saisi dans cet
+       espace : dépenses, montants, libellés, répartitions, remboursements, photos de justificatifs,
+       et votre nom d'affichage. Une photo n'est visible que des membres de l'espace où elle a été
+       ajoutée.</p>
 
     <h2>4. Durée de conservation</h2>
     <ul>
-      <li>Compte et données budgétaires : jusqu'à la suppression du compte</li>
-      <li>Espace partagé : supprimé, avec tout son contenu, lorsque son dernier membre le quitte</li>
-      <li>Rapports de plantage : 90 jours</li>
-      <li>Jetons de notification : supprimés dès qu'ils deviennent invalides</li>
+      <li>Compte et données budgétaires : jusqu'à la suppression du compte. Un compte
+          inutilisé pendant 2 ans est supprimé automatiquement, avec les mêmes effets que
+          « Supprimer mon compte » (<a href="#suppression">rubrique 5</a>). Vous êtes prévenu
+          au moins 30 jours avant, par e-mail si une adresse est enregistrée sur le compte, et
+          par une notification sur votre téléphone si elles sont activées. Utiliser
+          l'application pendant ce délai annule la suppression.</li>
+      <li>Simulations enregistrées : jusqu'à la suppression du compte, sauf si vous les effacez
+          avant</li>
+      <li>Espace partagé : supprimé, avec tout son contenu (photos comprises), lorsque son dernier
+          membre le quitte</li>
+      <li>Photos de justificatifs : jusqu'à ce qu'un membre supprime la photo ou la dépense à
+          laquelle elle est jointe, ou jusqu'à la suppression de l'espace qui la contient</li>
+      <li>Quitter un groupe n'efface pas les dépenses passées ni leurs photos : elles restent
+          nécessaires au calcul des sommes dues aux autres membres, avec votre nom d'affichage</li>
+      <li>Code de confirmation d'adresse e-mail : valable 15 minutes. Il est effacé dès qu'il a
+          servi, quand vous demandez un nouveau code, ou quand vous le saisissez après son
+          expiration. Un code expiré que vous n'avez jamais saisi reste enregistré, inutilisable,
+          jusqu'à votre prochaine demande ou à la suppression du compte.</li>
+      <li>Rapports de plantage : conservés 90 jours par Google, puis effacés progressivement de ses
+          systèmes (durée fixée par Firebase)</li>
+      <li>Jetons de notification : supprimés de notre serveur avec le compte. Quand vous coupez
+          « Notifications de groupe » dans les paramètres, l'application demande au serveur
+          d'oublier le jeton de ce téléphone. Un jeton devenu inutilisable autrement (application
+          désinstallée, par exemple) est supprimé au premier envoi qui échoue. À la suppression du
+          compte, l'application demande aussi à Firebase d'effacer le jeton de l'appareil (si le
+          téléphone est connecté à ce moment-là).</li>
+      <li>Adresse IP : en mémoire seulement, une heure au plus</li>
+      <li>Copies de sauvegarde (Google Drive) : une donnée supprimée de l'application reste dans
+          les copies faites avant sa suppression, jusqu'à ce que la dernière d'entre elles soit
+          remplacée, au bout de 7 jours au plus (une copie est faite chaque jour, et seules les
+          7 dernières sont gardées). Ces copies ne servent
+          qu'à restaurer le serveur après une panne.</li>
     </ul>
 
-    <h2>5. Vos droits (RGPD)</h2>
-    <p>Vous disposez d'un droit d'accès, de rectification, de portabilité, de suppression et
-       d'opposition.</p>
+    <h2 id="suppression">5. Supprimer votre compte MyRevent</h2>
+    <p><strong>Depuis l'application :</strong> menu ⋮ &gt; Supprimer mon compte (ou Paramètres
+       &gt; Mes données). Votre code PIN vous est demandé, et l'export de vos données vous est
+       proposé avant.</p>
+    <p><strong>Sans l'application</strong> (téléphone perdu, application désinstallée) : écrivez à
+       <a href="mailto:support@myrevent.com?subject=Suppression%20de%20mon%20compte%20MyRevent">support@myrevent.com</a>
+       depuis l'adresse e-mail enregistrée sur votre compte, avec pour objet « Suppression de mon
+       compte MyRevent », en indiquant votre pseudo. Nous pourrons vous demander de confirmer que
+       le compte est bien le vôtre. Vous n'avez pas besoin de réinstaller l'application.</p>
+    <p><strong>Ce qui est supprimé :</strong> votre compte, votre e-mail, votre PIN, votre question
+       de sécurité, vos jetons, votre budget personnel et son historique, vos simulations
+       enregistrées, vos réglages, et tout espace partagé dont vous étiez le dernier membre
+       (photos comprises). Sur le téléphone,
+       l'application efface aussi sa copie de vos données, les chiffres gardés pour le widget,
+       votre pseudo et la copie de votre PIN.</p>
+    <p><strong>Ce qui est conservé, et pourquoi :</strong></p>
+    <ul>
+      <li>Dans un <strong>groupe</strong> qui continue sans vous, les dépenses et remboursements
+          déjà saisis restent, car ils servent à calculer ce que les autres membres se doivent.
+          Votre nom d'affichage y est remplacé par « Ancien membre ». Les photos que vous avez
+          jointes à ces dépenses restent visibles des membres de ce groupe tant que la dépense et
+          le groupe existent.</li>
+      <li>Dans un <strong>foyer</strong> qui continue sans vous,
+          le budget commun reste tel quel chez l'autre membre, y compris les revenus et les noms
+          que vous y avez saisis : rien n'y est remplacé par « Ancien membre ». Modifiez ou retirez
+          vos lignes avant de partir si vous le souhaitez.</li>
+      <li>Les rapports de plantage, qui ne sont pas liés à votre compte, sont conservés 90 jours
+          par Google, puis effacés progressivement.</li>
+      <li>Les copies de sauvegarde faites avant la suppression contiennent encore vos données,
+          jusqu'à leur remplacement (rubrique 4).</li>
+    </ul>
+    <p><strong>À ne pas confondre avec « Réinitialiser » :</strong> ce bouton remet votre budget
+       personnel à zéro (catégories, budgets, dépenses, historique, réglages). Il ne supprime pas
+       votre compte : votre pseudo, votre e-mail, votre PIN, votre question de sécurité et sa
+       réponse, et vos espaces partagés sont gardés.</p>
+
+    <h2>6. Vos droits (RGPD)</h2>
+    <p>Vous disposez d'un droit d'accès, de rectification, de portabilité, de suppression,
+       de limitation et d'opposition.</p>
+    <p>Vous pouvez aussi nous donner des consignes sur ce que deviendront vos données
+       après votre décès (les conserver, les effacer ou les communiquer), et désigner une
+       personne chargée de les faire appliquer.</p>
     <p><strong>Depuis l'application :</strong></p>
     <ul>
-      <li>Accès et portabilité : Paramètres &gt; Mes données (export)</li>
-      <li>Rectification : modification directe, et Paramètres &gt; Sécurité pour l'e-mail</li>
-      <li>Suppression : menu ⋮ &gt; Supprimer mon compte (ou Paramètres &gt; Mes données).
-          L'export vous est proposé avant.</li>
+      <li>Accès et portabilité : Paramètres &gt; Mes données. L'<strong>export JSON</strong>
+          (réutilisable) est l'export complet. Il contient : votre compte (pseudo, e-mail, jour de
+          salaire, version et date d'acceptation des conditions, date de dernière utilisation, date
+          du dernier changement de code PIN) ;
+          vos espaces ; vos listes (budget, catégories…) ; vos dépenses ; votre historique ; vos
+          réglages, dont votre question de sécurité et vos simulations enregistrées ; et, pour
+          chaque espace partagé, les dépenses
+          avec leur répartition (part due, montant payé par chacun, règlement), les
+          remboursements, les dépenses récurrentes (avec leur répartition et les mois sautés), les
+          parts par défaut et les mois clôturés, avec le nom des membres concernés. Pour un espace
+          partagé, vous recevez ce que vous voyez dans l'application, y compris ce que les autres
+          membres y ont saisi. Le <strong>tableur CSV</strong> et le <strong>PDF</strong> en sont
+          des versions lisibles, limitées aux dépenses et à l'historique. Les photos se récupèrent
+          à part, avec « Mes photos de justificatifs ».</li>
+      <li>L'export ne contient pas les secrets : ni l'empreinte de votre PIN ou de votre réponse
+          de sécurité, ni la clé de double authentification, ni les jetons.</li>
+      <li>Rectification : vos budgets, dépenses et réglages se modifient directement dans
+          l'application, et l'e-mail dans Paramètres &gt; Sécurité. Le pseudo et votre nom
+          d'affichage dans un groupe ne se modifient pas dans l'application : écrivez-nous, nous
+          les corrigerons.</li>
+      <li>Suppression d'une partie de vos données, sans supprimer le compte : chaque dépense et
+          chaque photo peut être supprimée une à une, et « Réinitialiser » efface votre budget
+          personnel (rubrique 5).</li>
+      <li>Suppression du compte : voir la <a href="#suppression">rubrique 5</a></li>
+      <li>Notifications : vous pouvez les couper dans les réglages Android de l'application</li>
     </ul>
-    <p>Vous pouvez aussi nous écrire à
-       <a href="mailto:support@myrevent.com">support@myrevent.com</a>. Vous avez le droit
+    <p>Si une donnée manque dans l'export, écrivez-nous : nous vous la fournirons.
+       Contact : <a href="mailto:support@myrevent.com">support@myrevent.com</a>. Vous avez le droit
        d'introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
 
-    <h2>6. Sécurité</h2>
-    <p>Codes et réponses secrètes chiffrés, échanges en HTTPS, session limitée dans le temps,
-       protection contre les tentatives répétées de connexion.</p>
+    <h2>7. Sécurité</h2>
+    <p>Code PIN et réponse secrète hachés avec un secret gardé hors de la base de données : une
+       copie de la base ne suffit pas à les retrouver par essais. Un code de 4 à 6 chiffres reste
+       court : ce qui le protège surtout, c'est le blocage du compte après 5 essais faux (code PIN
+       ou réponse secrète), de 15 minutes la première fois jusqu'à 24 heures, de plus en plus
+       longtemps si les erreurs continuent (le compteur, gardé sur le serveur, repart de zéro au
+       premier essai juste), et l'accès restreint au serveur. Clé de double authentification
+       chiffrée, avec une clé gardée elle aussi hors de la base. Du jeton d'appareil,
+       seule l'empreinte est gardée. Un compte ancien peut encore garder une empreinte d'un
+       format plus faible, ou une clé de double authentification et un jeton d'appareil d'un
+       ancien format, en clair : chacun est remplacé dès qu'il sert de nouveau (l'ancien jeton
+       d'appareil, à la prochaine activation de la double authentification). Code de confirmation
+       d'adresse e-mail haché lui aussi, mais un code de 6 chiffres pourrait être retrouvé par essais : ce
+       qui le protège, c'est sa validité de 15 minutes et la limite de tentatives. Tous les
+       échanges en HTTPS ; session limitée dans le temps ; jetons de connexion et copie du PIN
+       rangés dans le stockage sécurisé d'Android ; photos acceptées seulement si leur contenu est
+       bien une image JPEG, PNG ou WebP (vérifié par le serveur), et rangées sous un nom de fichier
+       tiré au sort. Aucune sécurité n'étant absolue, nous vous préviendrons si une violation de
+       vos données présentait un risque élevé pour vous.</p>
 
-    <h2>7. Contact</h2>
-    <p>Pour exercer vos droits : <a href="mailto:support@myrevent.com">support@myrevent.com</a></p>
+    <h2>8. Contact</h2>
+    <p>Responsable du traitement : Mickaël CONDETTE, éditeur de MyRevent.<br>
+       Pour exercer vos droits : <a href="mailto:support@myrevent.com">support@myrevent.com</a></p>
   </div>
 </main>
 <footer>© MyRevent — Document soumis au droit français.</footer>
