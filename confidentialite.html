@@ -14,9 +14,32 @@
 <main>
   <a class="back" href="index.html">← Informations légales</a>
   <div class="card">
-    <p class="maj">Dernière mise à jour : 22 novembre 2026</p>
+    <p class="maj">Dernière mise à jour : 26 novembre 2026</p>
 
-    <h2>Ce qui a changé depuis août 2026</h2>
+    <h2>Ce qui a changé le 26 novembre 2026</h2>
+    <ul>
+      <li><strong>MyRevent Premium</strong> : le serveur note vos droits au Premium (essai de
+          14 jours, cadeau de l'éditeur, achat) dans un registre, et crée pour votre compte un
+          identifiant d'achats tiré au hasard (rubriques 1, 2, 4 et 6).</li>
+      <li><strong>Fréquence de venue</strong> : le serveur compte combien de jours vous utilisez
+          MyRevent dans le mois. Ce nombre est remis à zéro chaque mois ; il n'en reste que des
+          totaux anonymes (rubriques 1, 2 et 4).</li>
+      <li><strong>Compteurs anonymes</strong> : l'application signale au serveur quelques étapes
+          vers le Premium ; le serveur n'en garde que des totaux par jour, sans rien qui vous
+          désigne (rubriques 1 et 2).</li>
+      <li><strong>Le Premium au Foyer</strong> : si l'un de vous deux paie, l'autre en profite et
+          voit qu'il vient de lui (rubrique 3).</li>
+      <li><strong>Groupes créés</strong> : le serveur note qui a créé chaque groupe, pour la règle
+          du groupe gratuit (rubrique 1) ; ils figurent dans l'export de vos données
+          (rubrique 6).</li>
+      <li><strong>Votre choix sur les statistiques</strong> : un interrupteur, dans Paramètres,
+          arrête la fréquence de venue et les compteurs pour votre compte (rubriques 2 et 6).</li>
+      <li><strong>Dépenses favorites</strong> (rubrique 1).</li>
+      <li><strong>Dicter une dépense</strong> : votre voix est reconnue sur votre téléphone ;
+          MyRevent ne l'envoie nulle part (rubrique 1).</li>
+    </ul>
+
+    <h2>Ce qui avait changé d'août à novembre 2026</h2>
     <ul>
       <li><strong>Photos de justificatifs</strong> : dans un groupe, vous pouvez joindre la photo
           d'un ticket ou d'une facture à une dépense. Cette photo est envoyée à notre serveur et
@@ -93,6 +116,34 @@
           reçoit un, pour être reconnu ensuite (5 téléphones par compte au plus). Le serveur n'en
           garde que l'empreinte, avec la date du dernier passage de ce téléphone.</li>
       <li>Jeton de notification (Firebase), pour vous prévenir sur cet appareil</li>
+      <li><strong>La date de création de votre compte.</strong> Elle sert à calculer votre essai
+          Premium, et à ne compter dans les totaux mensuels (plus bas) que les comptes qui
+          existaient ce mois-là. Pour un compte plus ancien que cette version de la politique,
+          elle n'est pas connue et reste vide.</li>
+      <li><strong>Un identifiant d'achats</strong> : un code tiré au hasard, sans lien avec votre
+          pseudo ni votre e-mail. Il est créé avec votre compte (pour un compte plus ancien, la
+          première fois que l'application demande votre statut Premium). Il servira à relier un
+          achat à votre compte sans donner votre pseudo à notre prestataire des achats.</li>
+      <li><strong>Votre registre Premium</strong> : une ligne pour chaque période de Premium, avec
+          son origine (essai, cadeau de l'éditeur, abonnement), ses dates de début et de fin, la
+          date d'un éventuel remboursement ou retrait, la date de sa dernière modification et,
+          pour un achat, le magasin par lequel il est passé, la formule (mensuelle ou annuelle)
+          et si l'abonnement se renouvelle. Pour un achat, le serveur garde aussi une
+          <strong>empreinte</strong> de la preuve d'achat : un code calculé à partir d'elle, qui
+          ne permet pas de la retrouver. Il ne garde jamais la preuve elle-même, ni votre moyen
+          de paiement, qu'il ne voit pas. À la création de votre compte, le registre reçoit une
+          ligne « essai » de 14 jours. Si votre Foyer se sépare alors que l'autre membre vous
+          faisait profiter de son Premium, une ligne note la date de fin de ce partage : elle
+          sert au délai de 30 jours des groupes créés en plus (CGU, article 3 bis).</li>
+      <li><strong>La fréquence de venue</strong> : le nombre de jours, dans le mois en cours, où
+          l'application s'est connectée à notre serveur avec votre compte (en pratique, les jours
+          où vous l'ouvrez). Le serveur garde ce seul nombre et le mois auquel il se rapporte,
+          jamais la liste des jours ni les heures. Au début de chaque mois, la nuit, il range les
+          totaux du mois fini (par exemple « 12 comptes sont venus presque tous les jours » :
+          20 jours ou plus ; « chaque semaine » : 4 à 19 jours ; « de temps en temps » : 1 à
+          3 jours), puis remet votre nombre à zéro. Il sert à savoir si l'application est utile,
+          et à l'améliorer (rubrique 2). Vous pouvez l'arrêter à tout moment, dans Paramètres
+          (rubrique 2).</li>
       <li>Si vous activez la double authentification : une clé secrète, chiffrée sur le serveur
           avec une clé gardée hors de la base de données (le serveur doit pouvoir la relire pour
           vérifier les codes de votre application d'authentification)</li>
@@ -128,6 +179,15 @@
           plus), son nom, sa date et son contenu (les montants simulés et l'objectif éventuel)
           sont gardés sur notre serveur avec votre compte, pour que vous les retrouviez sur vos
           appareils. Elles restent personnelles : jamais dans le foyer ni dans un groupe.</li>
+      <li><strong>Les groupes que vous avez créés</strong> : le serveur note qui a créé chaque
+          groupe, pour appliquer la règle du groupe gratuit (CGU, article 3 bis). Pour un groupe
+          plus ancien que cette version de la politique, c'est son premier membre inscrit. Le
+          serveur ne donne pas cette information aux autres membres. Vous la retrouvez dans
+          l'export de vos données (rubrique 6).</li>
+      <li><strong>Dépenses favorites</strong> — leur description, leur montant et leur catégorie
+          sont gardés avec votre compte, sur notre serveur, pour les retrouver sur vos autres
+          téléphones. Vous les retirez d'un appui long ; elles sont effacées avec votre compte et
+          figurent dans l'export de vos données.</li>
     </ul>
 
     <p><strong>Ce qui reste sur votre téléphone</strong></p>
@@ -141,8 +201,13 @@
           (voir « Magasins retenus », plus haut).</li>
       <li>Une copie de vos données pour fonctionner hors connexion, dans l'espace privé de
           l'application sur le téléphone. Elle n'est copiée ni dans les sauvegardes Android, ni
-          lors d'un transfert vers un nouveau téléphone. Elle est effacée à chaque nouvelle
-          connexion, à la suppression du compte, et quand vous désinstallez l'application.</li>
+          lors d'un transfert vers un nouveau téléphone. Elle est effacée quand un autre compte se
+          connecte, à la suppression du compte, et quand vous désinstallez l'application. Pour le
+          même compte, une nouvelle connexion garde seulement vos saisies faites sans réseau, qui
+          attendent d'être envoyées, et la copie de vos favoris.</li>
+      <li>Si le serveur refuse une saisie faite sans réseau (un groupe passé en lecture seule, par
+          exemple), une note la décrit sur le téléphone (libellé, montant, groupe) jusqu'à ce que
+          vous touchiez « Compris ».</li>
       <li>Les chiffres que le widget d'écran d'accueil peut afficher (disponible, revenus,
           charges, épargne, catégories, soldes de vos groupes et du foyer), gardés dans l'espace
           privé de l'application tant que vous êtes connecté, même si vous n'avez posé aucun
@@ -165,6 +230,14 @@
           courte empreinte de chaque dépense ajoutée (calculée à partir de sa date, de son montant
           et de son libellé) est gardée sur notre serveur avec votre budget, 1 000 au plus, pour
           vous signaler « déjà importée » au relevé suivant.</li>
+      <li><strong>Micro</strong> — seulement si vous dictez une dépense. Quand vous touchez 🎤,
+          votre voix est reconnue sur votre téléphone, par le service de reconnaissance vocale
+          « sur l'appareil » d'Android (fourni par Google ou par le fabricant du téléphone).
+          MyRevent n'enregistre pas votre voix et ne l'envoie nulle part : seul le texte reconnu
+          remplit la feuille, et rien n'est enregistré avant que vous touchiez « Ajouter ».</li>
+      <li>Pour les compteurs anonymes (rubrique 1, « Fonctionnement technique »), l'application
+          garde sur le téléphone le jour du dernier envoi de chacun, pour ne l'envoyer qu'une fois
+          par jour.</li>
     </ul>
 
     <p><strong>Fonctionnement technique</strong></p>
@@ -181,12 +254,25 @@
       <li>Votre adresse IP, vue par notre serveur et par Cloudflare. Notre serveur ne l'enregistre
           pas en base : il la garde en mémoire, une heure au plus, pour limiter les tentatives de
           connexion répétées.</li>
+      <li><strong>Compteurs anonymes</strong> : quand vous touchez une fonction Premium sans
+          l'avoir, quand vous ouvrez la page Premium, et quand vous commencez un achat (avec la
+          formule choisie), l'application le signale à notre serveur, au plus une fois par jour
+          pour chaque étape. Le serveur ajoute 1 au total du jour et ne garde rien d'autre : ni
+          votre pseudo, ni votre compte, ni l'heure. Il compte de la même façon les achats
+          terminés, par formule. Pour bloquer les envois en rafale, il garde en mémoire, une
+          heure au plus, le nombre d'envois de chaque compte (jamais dans la base). Chaque lundi,
+          un résumé de ces totaux et de ceux de la fréquence de venue est envoyé par e-mail à
+          l'éditeur, et à lui seul (rubrique 3) : il ne contient aucun nom ni aucun identifiant.
+          Si vous dites non aux statistiques (rubrique 2), le serveur n'en compte plus aucun pour
+          votre compte.</li>
     </ul>
 
-    <p><strong>MyRevent n'a pas d'outil de mesure d'audience. Seul l'outil de lecture de ticket
-       (ML Kit) envoie à Google des statistiques techniques sur sa propre utilisation, décrites
-       ci-dessus. Aucune publicité, aucun traceur publicitaire, aucune revente de données. Aucune
-       connexion à votre banque.</strong></p>
+    <p><strong>MyRevent n'utilise aucun outil de mesure d'audience d'une autre société. Il fait
+       lui-même deux comptages, décrits plus haut : la fréquence de venue et les compteurs
+       anonymes ; il n'en garde que des totaux, et vous pouvez les refuser (rubrique 2). Seul
+       l'outil de lecture de ticket (ML Kit) envoie à Google des statistiques techniques sur sa
+       propre utilisation, décrites ci-dessus. Aucune publicité, aucun traceur publicitaire,
+       aucune revente de données. Aucune connexion à votre banque.</strong></p>
 
     <h2>2. Finalités et bases légales</h2>
     <ul>
@@ -203,7 +289,23 @@
           fonctionne.</li>
       <li>Garder des copies de sauvegarde, pour pouvoir restaurer vos données après une panne :
           notre intérêt légitime à ne pas les perdre.</li>
+      <li>Gérer votre Premium (essai, cadeau de l'éditeur, achats, partage au Foyer, règle des
+          groupes créés), avec la date de création du compte, l'identifiant d'achats, le registre
+          Premium et le créateur de chaque groupe : exécution du contrat (les CGU, et les
+          conditions de vente si vous achetez).</li>
+      <li>Savoir si MyRevent est utile, et comprendre pourquoi on prend le Premium ou non
+          (fréquence de venue, compteurs anonymes) : notre intérêt légitime à améliorer
+          l'application et à la financer sans publicité.</li>
     </ul>
+    <p><strong>Vous pouvez vous opposer à tout moment à la fréquence de venue et aux compteurs
+       anonymes</strong> : dans Paramètres, désactivez « Aider à améliorer MyRevent » (ou écrivez
+       à <a href="mailto:support@myrevent.com">support@myrevent.com</a>). Dès cet instant, le serveur ne compte plus ni vos jours de venue,
+       ni vos étapes vers le Premium, et votre compte n'entre plus dans aucun total. Votre nombre
+       de jours du mois en cours est effacé tout de suite. Les totaux déjà faits, qui ne
+       désignent personne, restent. La date de votre dernière venue, elle, est toujours notée :
+       elle sert seulement à la règle des comptes inutilisés (rubrique 4). Votre choix reste en
+       place, même si vous utilisez « Réinitialiser ». Vous pouvez changer d'avis à tout moment :
+       le comptage reprend alors, à partir de ce jour-là.</p>
 
     <h2>3. Destinataires et sous-traitants</h2>
     <p>Vos données sont stockées sur un serveur privé situé en France, administré par l'éditeur.
@@ -232,8 +334,9 @@
       <li><strong>Brevo</strong>, société française — envoi de nos courriers : le code qui confirme
           votre adresse, le rappel de votre pseudo si vous l'oubliez,
           l'alerte quand des codes faux bloquent votre compte deux fois de suite (adresse
-          confirmée seulement), et l'avertissement avant la suppression d'un compte inutilisé
-          (rubrique 4).</li>
+          confirmée seulement), l'avertissement avant la suppression d'un compte inutilisé
+          (rubrique 4) et, chaque lundi, le résumé des compteurs et de la fréquence de venue,
+          envoyé à l'éditeur seul : des totaux, sans aucun nom ni identifiant.</li>
       <li><strong>Google Play</strong> — si vous installez ou mettez à jour l'application par
           Google Play, Google traite les données de votre compte Google selon ses propres règles,
           et l'éditeur reçoit de Google Play des chiffres d'ensemble (nombre d'installations,
@@ -258,6 +361,16 @@
        espace : dépenses, montants, libellés, répartitions, remboursements, photos de justificatifs,
        et votre nom d'affichage. Une photo n'est visible que des membres de l'espace où elle a été
        ajoutée.</p>
+    <p><strong>Le Premium au Foyer.</strong> Si l'un de vous deux a un abonnement en cours,
+       l'autre a aussi le Premium. Son application reçoit alors votre pseudo, pour afficher
+       « Premium grâce à … », et la date de fin de la période en cours de votre abonnement. Elle
+       ne reçoit ni le prix, ni la formule. Si vous payez tous les deux, chacun voit que l'autre
+       paie aussi. Votre essai et un Premium offert par l'éditeur ne se partagent pas : votre
+       partenaire n'en reçoit rien.</p>
+    <p><strong>Les groupes créés en plus.</strong> Si vous avez créé plusieurs groupes et que votre
+       Premium s'arrête, les membres de chacun de vos groupes créés en plus reçoivent sur leur
+       téléphone la date à laquelle il passera en lecture seule, puis qu'il l'est (CGU, article 3 bis). Le serveur ne
+       leur dit pas qui a créé le groupe.</p>
 
     <h2>4. Durée de conservation</h2>
     <ul>
@@ -266,7 +379,21 @@
           « Supprimer mon compte » (<a href="#suppression">rubrique 5</a>). Vous êtes prévenu
           au moins 30 jours avant, par e-mail si une adresse est enregistrée sur le compte, et
           par une notification sur votre téléphone si elles sont activées. Utiliser
-          l'application pendant ce délai annule la suppression.</li>
+          l'application pendant ce délai annule la suppression.
+          Ne sont jamais supprimés pour inactivité, et ne reçoivent pas l'avertissement : les
+          comptes qui ont un abonnement en cours. Un Premium offert par l'éditeur ne protège pas
+          de cette règle.</li>
+      <li>Registre Premium, identifiant d'achats, date de création du compte : jusqu'à la
+          suppression du compte. Un remboursement ou un cadeau retiré n'efface pas sa ligne : il y
+          ajoute une date.</li>
+      <li>Fréquence de venue : votre nombre de jours est remis à zéro au début de chaque mois, la
+          nuit, après le calcul des totaux ; si ce comptage est arrêté, tous ces nombres sont
+          effacés la nuit suivante. Si vous refusez les statistiques, le vôtre est effacé tout de
+          suite (rubrique 2). Les totaux, anonymes, sont gardés.</li>
+      <li>Compteurs anonymes : des totaux par jour, sans personne. La mémoire qui bloque les
+          envois en rafale : une heure au plus.</li>
+      <li>Votre choix sur les statistiques : jusqu'à ce que vous le changiez, même si vous
+          utilisez « Réinitialiser » ; il part avec votre compte.</li>
       <li>Simulations enregistrées : jusqu'à la suppression du compte, sauf si vous les effacez
           avant</li>
       <li>Espace partagé : supprimé, avec tout son contenu (photos comprises), lorsque son dernier
@@ -306,8 +433,11 @@
        le compte est bien le vôtre. Vous n'avez pas besoin de réinstaller l'application.</p>
     <p><strong>Ce qui est supprimé :</strong> votre compte, votre e-mail, votre PIN, votre question
        de sécurité, vos jetons, votre budget personnel et son historique, vos simulations
-       enregistrées, vos réglages, et tout espace partagé dont vous étiez le dernier membre
-       (photos comprises). Sur le téléphone,
+       enregistrées, vos réglages, votre registre Premium, votre identifiant d'achats, la date de
+       création de votre compte, votre nombre de jours de venue, votre choix sur les statistiques,
+       vos dépenses favorites, et tout espace partagé dont vous étiez le dernier membre (photos
+       comprises) ; les groupes que vous avez créés ne vous désignent plus comme créateur. Sur le
+       téléphone,
        l'application efface aussi sa copie de vos données, les chiffres gardés pour le widget,
        votre pseudo et la copie de votre PIN.</p>
     <p><strong>Ce qui est conservé, et pourquoi :</strong></p>
@@ -325,11 +455,13 @@
           par Google, puis effacés progressivement.</li>
       <li>Les copies de sauvegarde faites avant la suppression contiennent encore vos données,
           jusqu'à leur remplacement (rubrique 4).</li>
+      <li>Si l'autre membre de votre Foyer profitait de votre Premium, il le perd ; une ligne
+          datée l'indique dans son propre registre (rubrique 1).</li>
     </ul>
     <p><strong>À ne pas confondre avec « Réinitialiser » :</strong> ce bouton remet votre budget
        personnel à zéro (catégories, budgets, dépenses, historique, réglages). Il ne supprime pas
        votre compte : votre pseudo, votre e-mail, votre PIN, votre question de sécurité et sa
-       réponse, et vos espaces partagés sont gardés.</p>
+       réponse, votre choix sur les statistiques, et vos espaces partagés sont gardés.</p>
 
     <h2>6. Vos droits (RGPD)</h2>
     <p>Vous disposez d'un droit d'accès, de rectification, de portabilité, de suppression,
@@ -340,11 +472,18 @@
     <p><strong>Depuis l'application :</strong></p>
     <ul>
       <li>Accès et portabilité : Paramètres &gt; Mes données. L'<strong>export JSON</strong>
-          (réutilisable) est l'export complet. Il contient : votre compte (pseudo, e-mail, jour de
-          salaire, version et date d'acceptation des conditions, date de dernière utilisation, date
-          du dernier changement de code PIN) ;
-          vos espaces ; vos listes (budget, catégories…) ; vos dépenses ; votre historique ; vos
-          réglages, dont votre question de sécurité et vos simulations enregistrées ; et, pour
+          (réutilisable) est l'export complet. Il contient : votre compte (pseudo, e-mail et s'il
+          est vérifié, jour de salaire, version et date d'acceptation des conditions, date de
+          dernière utilisation, date du dernier changement de code PIN, date de création du
+          compte, identifiant d'achats, jours de venue du mois, date de l'avertissement « compte
+          inutilisé » s'il y en a un en cours) ; votre registre Premium (périodes, origines,
+          dates, formules, empreintes d'achat) ; vos espaces ; les groupes que vous avez créés
+          (leur numéro, leur nom, et si vous en êtes encore membre) ; la date de votre première
+          arrivée dans chaque groupe, même ceux que vous avez quittés (avec leur numéro, leur nom,
+          et si vous en êtes encore membre) ; vos listes (budget, catégories…) ; vos dépenses ;
+          votre historique ; vos réglages, dont votre question de sécurité,
+          vos simulations enregistrées, votre choix sur les statistiques et vos dépenses
+          favorites ; et, pour
           chaque espace partagé, les dépenses
           avec leur répartition (part due, montant payé par chacun, règlement), les
           remboursements, les dépenses récurrentes (avec leur répartition et les mois sautés), les
@@ -361,8 +500,13 @@
           les corrigerons.</li>
       <li>Suppression d'une partie de vos données, sans supprimer le compte : chaque dépense et
           chaque photo peut être supprimée une à une, et « Réinitialiser » efface votre budget
-          personnel (rubrique 5).</li>
+          personnel (rubrique 5). Dans un groupe passé en lecture seule, on peut encore supprimer
+          une photo ou une dépense récurrente, mais plus une dépense : pour supprimer une dépense,
+          écrivez-nous.</li>
       <li>Suppression du compte : voir la <a href="#suppression">rubrique 5</a></li>
+      <li>Opposition : dans Paramètres, l'interrupteur « Aider à améliorer MyRevent » arrête la
+          fréquence de venue et les compteurs pour votre compte (rubrique 2). Vous pouvez aussi
+          nous écrire.</li>
       <li>Notifications : vous pouvez les couper dans les réglages Android de l'application</li>
     </ul>
     <p>Si une donnée manque dans l'export, écrivez-nous : nous vous la fournirons.
@@ -386,7 +530,10 @@
        échanges en HTTPS ; session limitée dans le temps ; jetons de connexion et copie du PIN
        rangés dans le stockage sécurisé d'Android ; photos acceptées seulement si leur contenu est
        bien une image JPEG, PNG ou WebP (vérifié par le serveur), et rangées sous un nom de fichier
-       tiré au sort. Aucune sécurité n'étant absolue, nous vous préviendrons si une violation de
+       tiré au sort.
+       Pour un achat, le serveur ne garde qu'une empreinte de la preuve d'achat. L'identifiant
+       d'achats est tiré au hasard : à lui seul, il ne permet pas de retrouver votre compte.
+       Aucune sécurité n'étant absolue, nous vous préviendrons si une violation de
        vos données présentait un risque élevé pour vous.</p>
 
     <h2>8. Contact</h2>
